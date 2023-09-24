@@ -4,19 +4,25 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
-
-  .:
-    devDependencies:
-      '@nx/js':
-        specifier: 16.9.0
-        version: 16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.2.2)
-      nx:
-        specifier: 16.9.0
-        version: 16.9.0
-      nx-cloud:
-        specifier: latest
-        version: 16.4.0
+devDependencies:
+  '@nx/js':
+    specifier: 16.9.0
+    version: 16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.1.6)
+  '@nx/workspace':
+    specifier: 16.9.0
+    version: 16.9.0
+  nx:
+    specifier: 16.9.0
+    version: 16.9.0
+  nx-cloud:
+    specifier: latest
+    version: 16.4.0
+  prettier:
+    specifier: ^2.6.2
+    version: 2.8.8
+  typescript:
+    specifier: ~5.1.3
+    version: 5.1.6
 
 packages:
 
@@ -1362,10 +1368,10 @@ packages:
       - nx
     dev: true
 
-  /@nrwl/js@16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.2.2):
+  /@nrwl/js@16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.1.6):
     resolution: {integrity: sha512-BrESQovbQNLuHT50dJttBFG7pomXWTJiVycfAknkGkE/+1/AdAkmx8PtBFBDTLvilsHV98VIWAwsPyo3tehQ4A==}
     dependencies:
-      '@nx/js': 16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.2.2)
+      '@nx/js': 16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.1.6)
     transitivePeerDependencies:
       - '@babel/traverse'
       - '@swc-node/register'
@@ -1424,7 +1430,7 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@nx/js@16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.2.2):
+  /@nx/js@16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.1.6):
     resolution: {integrity: sha512-ZERgtxck6tcWXpcPYQp87eHBUcQur7z7qyvMiDwD8rnMfXRIID2g4m0LyTFiZHS84ZsuQegs0mmkqckXsmLsAQ==}
     peerDependencies:
       verdaccio: ^5.0.4
@@ -1439,10 +1445,10 @@ packages:
       '@babel/preset-env': 7.22.20(@babel/core@7.22.20)
       '@babel/preset-typescript': 7.22.15(@babel/core@7.22.20)
       '@babel/runtime': 7.22.15
-      '@nrwl/js': 16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.2.2)
+      '@nrwl/js': 16.9.0(@types/node@20.6.4)(nx@16.9.0)(typescript@5.1.6)
       '@nx/devkit': 16.9.0(nx@16.9.0)
       '@nx/workspace': 16.9.0
-      '@phenomnomnominal/tsquery': 5.0.1(typescript@5.2.2)
+      '@phenomnomnominal/tsquery': 5.0.1(typescript@5.1.6)
       babel-plugin-const-enum: 1.2.0(@babel/core@7.22.20)
       babel-plugin-macros: 2.8.0
       babel-plugin-transform-typescript-metadata: 0.3.2(@babel/core@7.22.20)
@@ -1459,7 +1465,7 @@ packages:
       ora: 5.3.0
       semver: 7.5.3
       source-map-support: 0.5.19
-      ts-node: 10.9.1(@types/node@20.6.4)(typescript@5.2.2)
+      ts-node: 10.9.1(@types/node@20.6.4)(typescript@5.1.6)
       tsconfig-paths: 4.2.0
       tslib: 2.6.2
     transitivePeerDependencies:
@@ -1591,13 +1597,13 @@ packages:
       node-gyp-build: 4.6.1
     dev: true
 
-  /@phenomnomnominal/tsquery@5.0.1(typescript@5.2.2):
+  /@phenomnomnominal/tsquery@5.0.1(typescript@5.1.6):
     resolution: {integrity: sha512-3nVv+e2FQwsW8Aw6qTU6f+1rfcJ3hrcnvH/mu9i8YhxO+9sqbOfpL8m6PbET5+xKOlz/VSbp0RoYWYCtIsnmuA==}
     peerDependencies:
       typescript: ^3 || ^4 || ^5
     dependencies:
       esquery: 1.5.0
-      typescript: 5.2.2
+      typescript: 5.1.6
     dev: true
 
   /@sinclair/typebox@0.27.8:
@@ -2767,6 +2773,12 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
+  /prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
   /pretty-format@29.7.0:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -3037,7 +3049,7 @@ packages:
       is-number: 7.0.0
     dev: true
 
-  /ts-node@10.9.1(@types/node@20.6.4)(typescript@5.2.2):
+  /ts-node@10.9.1(@types/node@20.6.4)(typescript@5.1.6):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -3063,7 +3075,7 @@ packages:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.2.2
+      typescript: 5.1.6
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
@@ -3081,8 +3093,8 @@ packages:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
     dev: true
 
-  /typescript@5.2.2:
-    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
+  /typescript@5.1.6:
+    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
