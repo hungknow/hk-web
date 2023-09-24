@@ -1,5 +1,5 @@
 {
-  "name": "@org/source",
+  "name": "org",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {},
@@ -7,7 +7,7 @@
   "dependencies": {},
   "devDependencies": {
     "@nx/js": "16.9.0",
-    "@nx/workspace": "16.9.0",
-    "nx": "16.9.0"
+    "nx": "16.9.0",
+    "nx-cloud": "latest"
   }
 }
