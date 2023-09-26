@@ -10,6 +10,10 @@ const config: ModuleFederationConfig = {
         return {
           singleton: true
         }
+      case '@mantine/hooks':
+        return {
+          singleton: true
+        }
     }
     return false;
   }
