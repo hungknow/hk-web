@@ -1,16 +1,17 @@
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
-import NxWelcome from './nx-welcome';
+// import NxWelcome from './nx-welcome';
 
-const StyledApp = styled.div`
-  // Your style here
-`;
+// const StyledApp = styled.div`
+//   // Your style here
+// `;
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="react-ex1" />
-    </StyledApp>
+    <div>
+      <h1>Hello from React-Ex2</h1>
+      {/* <NxWelcome title="react-ex1" /> */}
+    </div>
   );
 }
 

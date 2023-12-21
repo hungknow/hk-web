@@ -70,7 +70,7 @@
       "options": {
         "buildTarget": "rust-wasm:build",
         "watch": false,
-        "port": 4200
+        "port": 4202
       },
       "configurations": {
         "development": {
