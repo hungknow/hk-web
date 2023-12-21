@@ -1,6 +1,6 @@
 import { AppShell, Burger } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import { LeftMenuBar } from '../LeftMenuBar/LeftMenuBar';
+import { LeftMenuBar } from './DashboardNavbar';
 
 export interface DashboardLayoutProps {
     children: React.ReactNode;

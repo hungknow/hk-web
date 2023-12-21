@@ -3,20 +3,24 @@ import { SharedLibraryConfig } from '@nx/webpack/src/utils/module-federation/pub
 
 const config: ModuleFederationConfig = {
   name: 'dashboard',
-  remotes: [],
+  remotes: ['react-ex1'],
   shared: (libraryName: string, sharedConfig: SharedLibraryConfig) => {
     switch (libraryName) {
       case '@mantine/core':
         return {
-          singleton: true
-        }
+          singleton: true,
+        };
       case '@mantine/hooks':
         return {
-          singleton: true
-        }
+          singleton: true,
+        };
+      case '@tabler/icons-react':
+        return {
+          singleton: true,
+        };
     }
     return false;
-  }
+  },
 };
 
 export default config;

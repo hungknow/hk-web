@@ -3,7 +3,7 @@ import * as React from 'react';
 import NxWelcome from './nx-welcome';
 
 import { Route, Routes } from 'react-router-dom';
-import { DashboardLayout } from '../components/Layout/DashboardLayout';
+import { DashboardLayout } from '../components/Dashboard/DashboardLayout';
 import { MantineProvider } from '@mantine/core';
 
 export function App() {
