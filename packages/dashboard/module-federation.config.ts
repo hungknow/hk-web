@@ -3,7 +3,7 @@ import { SharedLibraryConfig } from '@nx/webpack/src/utils/module-federation/pub
 
 const config: ModuleFederationConfig = {
   name: 'dashboard',
-  remotes: ['react-ex1'],
+  remotes: ['react-ex1', 'rust-wasm'],
   shared: (libraryName: string, sharedConfig: SharedLibraryConfig) => {
     switch (libraryName) {
       case '@mantine/core':
