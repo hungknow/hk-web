@@ -15,3 +15,4 @@ import('../../pkg/index.js')
     requestAnimationFrame(renderLoop);
   })
   .catch(console.error);
+  

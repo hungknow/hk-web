@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "compiler": "babel",
+        "compiler": "swc",
         "outputPath": "dist/packages/rust-wasm",
         "index": "packages/rust-wasm/src/public/index.html",
         "baseHref": "/",
@@ -18,7 +18,6 @@
         "assets": [],
         "styles": [],
         "scripts": [],
-        "isolatedConfig": true,
         "webpackConfig": "packages/rust-wasm/webpack.config.ts"
       },
       "configurations": {
@@ -40,11 +39,10 @@
       }
     },
     "serve": {
-      "executor": "@nx/react:module-federation-dev-server",
+      "executor": "@nx/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "rust-wasm:build",
-        "hmr": true,
         "port": 4202
       },
       "configurations": {
@@ -55,13 +53,6 @@
           "buildTarget": "rust-wasm:build:production",
           "hmr": false
         }
-      }
-    },
-    "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["packages/rust-wasm/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "serve-static": {
